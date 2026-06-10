@@ -5,7 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Greeting
-        run: echo "Hello, World!"
+        run: |
+          echo "Hello, World!"
+          echo "Welcome to my first GitHub Actions workflow."
       - name: Print Current Date
         run: date
       - name: Print Goodbye Message
