@@ -1,0 +1,21 @@
+name: Test Project
+on: workflow_dispatch
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 18
+      - name: Install Dependencies
+        run:
+          npm ci
+      - name: Check directory
+        run:
+          pwd
+      - name: Run Tests
+        run:
+          npm test
