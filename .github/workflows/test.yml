@@ -11,11 +11,13 @@ jobs:
         with:
           node-version: 18
       - name: Install Dependencies
+        working-directory: ./project
         run:
           npm ci
       - name: Check directory
         run:
           pwd
       - name: Run Tests
+        working-directory: ./project
         run:
           npm test
